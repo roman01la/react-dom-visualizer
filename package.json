@@ -1,0 +1,30 @@
+{
+  "name": "react-dom-visualizer",
+  "version": "1.0.0",
+  "description": "Visualize components structure in your React application as a tree chart",
+  "main": "src/index.js",
+  "scripts": {
+    "example:start": "NODE_ENV=development watchify example/src/index.js -t babelify -g envify -o example/build/bundle.js -dv",
+    "example:build": "NODE_ENV=production browserify example/src/index.js -t babelify -g envify | uglifyjs > example/build/bundle.js"
+  },
+  "keywords": [
+    "react",
+    "visualizer"
+  ],
+  "author": "Roman Liutikov <roman01la@romanliutikov.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "d3": "^3.5.17"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.0",
+    "envify": "^3.4.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "watchify": "^3.7.0"
+  }
+}
